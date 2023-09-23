@@ -9,7 +9,7 @@ const apiStatusConstants = {
   failure: 'FAILURE',
   inProgress: 'IN_PROGRESS',
 }
-class profileCard extends Component {
+class ProfileCard extends Component {
   state = {
     profileData: [],
     apiStatus: apiStatusConstants.initial,

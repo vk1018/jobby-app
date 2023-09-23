@@ -1,4 +1,4 @@
-const SkillCard = props => {
+const SkillsCard = props => {
   const {skillDetails} = props
   const {imageUrl, name} = skillDetails
   return (
@@ -10,4 +10,4 @@ const SkillCard = props => {
     </li>
   )
 }
-export default SkillCard
+export default SkillsCard

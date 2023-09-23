@@ -1,6 +1,6 @@
 import {BsSearch} from 'react-icons/bs'
 
-import ProfileDetails from '../profileDetails'
+import ProfileDetails from '../ProfileDetails'
 import './index.css'
 
 const FiltersGroup = props => {
@@ -41,7 +41,7 @@ const FiltersGroup = props => {
   }
 
   const renderTypeOfEmployment = () => {
-    const {employmentTypeList} = props
+    const {employmentTypesList} = props
     return (
       <div className="employment-type-container">
         <h1 className="employment-type-heading">Type of Employment</h1>

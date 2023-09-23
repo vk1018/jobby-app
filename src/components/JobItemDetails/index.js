@@ -8,7 +8,7 @@ import {MdLocationOn} from 'react-icons/md'
 import Header from '../Header'
 
 import SimilarJobItem from '../SimilarJobItem'
-import SkillCard from '../SkillCard'
+import SkillCard from '../SkillsCard'
 import './index.css'
 
 const apiStatusConstants = {
@@ -96,8 +96,9 @@ class JobItemDetails extends Component {
   renderFailureView = () => {
     const {match} = this.props
     const {params} = match
-
+    // eslint-disable-next-line
     const {id} = params
+
     return (
       <div className="job-item-error-view-container">
         <img
@@ -111,18 +112,18 @@ class JobItemDetails extends Component {
         <p className="job-item-failure-description">
           We cannot seem to find the page you are looking for
         </p>
-        <button type="button" id="button" className="job--item-failure-button">
+        <button type="button" id="button" className="job-item-failure-button">
           Retry
         </button>
       </div>
     )
   }
 
-  renderLoadingView = () => {
-    ;<div className="job-item-loader-container" data-testid="loader">
+  renderLoadingView = () => (
+    <div className="job-item-loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#fff" height="50" width="50" />
     </div>
-  }
+  )
 
   renderJobDetailsView = () => {
     const {jobData, similarJobsData} = this.state
