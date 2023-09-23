@@ -33,6 +33,7 @@ class JobItemDetails extends Component {
     companyLogoUrl: data.company_logo_url,
     employmentType: data.employment_type,
     id: data.id,
+    jobDescription: data.job_description,
     location: data.location,
     rating: data.rating,
     title: data.title,
@@ -43,7 +44,7 @@ class JobItemDetails extends Component {
     companyWebsiteUrl: data.company_website_url,
     employmentType: data.employment_type,
     id: data.id,
-    jobDescription: data.jobDescription,
+    jobDescription: data.job_description,
     lifeAtCompany: {
       description: data.life_at_company.description,
       imageUrl: data.life_at_company.image_url,
@@ -68,7 +69,7 @@ class JobItemDetails extends Component {
     const url = `https://apis.ccbp.in/jobs/${id}`
     const options = {
       headers: {
-        Authorization: `Bearer${jwtToken}`,
+        Authorization: `Bearer ${jwtToken}`,
       },
       method: 'GET',
     }
@@ -112,7 +113,12 @@ class JobItemDetails extends Component {
         <p className="job-item-failure-description">
           We cannot seem to find the page you are looking for
         </p>
-        <button type="button" id="button" className="job-item-failure-button">
+        <button
+          type="button"
+          id="button"
+          className="job-item-failure-button"
+          onClick={this.getJobData}
+        >
           Retry
         </button>
       </div>

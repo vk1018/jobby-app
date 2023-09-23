@@ -68,11 +68,11 @@ class ProfileCard extends Component {
     </div>
   )
 
-  renderLoadingView = () => {
-    ;<div className="profile-loader-container" id="loader">
+  renderLoadingView = () => (
+    <div className="profile-loader-container" id="loader">
       <Loader type="ThreeDots" color="#fff" height="50" width="50" />
     </div>
-  }
+  )
 
   render() {
     const {apiStatus} = this.state
